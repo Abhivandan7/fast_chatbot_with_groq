@@ -5,12 +5,14 @@ import gradio as gr
 
 load_dotenv()
 
-LLM= ["gemma-7b-it",
-        "gemma2-9b-it",
-        "llama2-70b-4096",
-        "llama3-8b-8192"
-        "llama3-70b-8192",
-        "mixtral-8x7b-32768"]
+LLM= [
+    "gemma-7b-it",
+    "gemma2-9b-it",
+    "llama2-70b-4096",
+    "llama3-8b-8192"
+    "llama3-70b-8192",
+    "mixtral-8x7b-32768"
+    ]
 
 
 #Initialize the values for the variables according to your purpose 
@@ -61,15 +63,24 @@ def generate(Prompt, history):
 
 
 #Construction of the UI for the application
-demo = gr.ChatInterface(
-    title = f"A Simple ChatBot powered by GROQ 💥",
-    description="Responses at the speed of lightning 🗲",
-    undo_btn=None,
-    retry_btn="Retry",
-    clear_btn="Clear",
-    fn = generate,
-    examples= ["hi", "how are you?"],
-).launch(share=False)
+with gr.Blocks(fill_height=True) as demo:
+    gr.ChatInterface(
+        title = f"A Simple ChatBot powered by GROQ 💥",
+        description="Responses at the speed of lightning 🗲",
+        undo_btn=None,
+        retry_btn="Retry",
+        clear_btn="Clear",
+        fn = generate,
+        examples= [
+            "hi", 
+            "how are you?",
+            "Tell me about Iron Man",
+            "Suggest me some ideas for my next blog post"
+            ],
+    )
+
+if __name__ == "__main__":
+    demo.launch()
 
 
 
