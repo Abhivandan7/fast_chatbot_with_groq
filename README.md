@@ -22,7 +22,7 @@ The chatbot leverages the power of the GROQ API and Gradio to offer a user-frien
 
 Before you begin, ensure you have met the following requirements:
 
-- Python 3.7 or higher
+- Python 3.10 or higher 
 - Pip (Python package installer)
 - An API key for the GROQ API (if required)
 
@@ -31,8 +31,8 @@ Before you begin, ensure you have met the following requirements:
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/yourusername/fast-chatbot-groq-api.git
-    cd fast-chatbot-groq-api
+    git clone https://github.com/Abhivandan7/fast_chatbot_with_groq.git
+    cd fast_chatbot_with_groq
     ```
 
 2. Install the required packages:
@@ -82,10 +82,6 @@ Here are some screenshots of the application:
 ### Screenshot 2
 
 ![Screenshot 2](screenshots/scrn2.png)
-
-### Screenshot 3
-
-![Screenshot 3](screenshots/scrn3.png)
 
 
 ## Contributing
